@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <style>
+* {
+  box-sizing: border-box;
+  background-color: yellow;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: black;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: red;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  background-color: black;
+  text-align: center;
+}
+
+.right {
+  background-color: black;
+  float: right;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+fieldset{
+    background-color: red;
+    opacity: 65%;
+}
+legend{
+    color: black;
+    background-color: yellow;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:red;">
+
+  <div style="background-color: black;padding:15px;text-align:center;">
+    <h1>Medve Márton</h1>
+  </div>
+<body>
+    <div style="overflow:auto">
+  <div class="menu">
+    <a href="index2.html">Főoldal</a>
+    <a href="keplink2.html">Képlink</a>
+    <a href="lista2.html">Lista</a>
+    <a href="tablazat2.html">Órarend</a>
+    <a href="urlap2.html">Űrlap</a>
+    <a href="div2.html">Évszakok</a>
+    <a href="szamologep2.html">Számológép</a>
+    <a href="pita.html">Pitagorasz</a>
+  </div>
+
+  <div style="overflow:auto">
+    <div class="menu">
+        <fieldset>
+            <legend>Számológép</legend>
+            <form action="javascript:void(0)">
+                <input type="number" value="szam" id="a" placeholder="szám1">.
+                <input type="number" value="szam" id="b" placeholder="szám2">=
+                <input type="number" name="eredmeny" id="c" readonly placeholder="eredmeny">
+                <br><br>
+                <input type="button" value="+" onclick="ad()">
+                <input type="button" value="-" onclick="kiv()">
+                <input type="button" value="*" onclick="szor()">
+                <input type="button" value="/" onclick="oszt()">
+                <input type="reset" value="delete">
+            </form>
+        </fieldset>
+        <script>
+            function ad() {
+                c.value = Number(a.value) + Number(b.value)
+            }
+            function kiv() {
+                c.value = Number(a.value) - Number(b.value)
+            }
+            function szor() {
+                c.value = Number(a.value) * Number(b.value)
+            }
+            function oszt() {
+                c.value = Number(a.value) / Number(b.value)
+            }
+        </script>
+    </div>
+
+    <div class="right">
+      <h2>Rólam</h2>
+      <p>Szeretek sportolni.</p>
+      <p>A DVTK-ban kézilabdázok.</p>
+      <img src="img/kollazskep.jpg" alt="az én kollazskepem" width="150px" height="150px">
+    </div>
+</div>
+</div>
+<div style="background-color:black;text-align:center;padding:10px;margin-top:7px;">Készítette Medve Márton</div> 
+</body>
+</html>
